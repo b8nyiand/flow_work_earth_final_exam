@@ -9,15 +9,15 @@ import java.time.LocalDate;
 public class Employee {
 
     @Id
-    private String username;
+    private String userName;
     private String fullName;
     private String department;
     private Integer jobGrade;
     private Long salary;
     private LocalDate creationDate;
 
-    public Employee(String username, String fullName, String department, Integer jobGrade, Long salary, LocalDate creationDate) {
-        this.username = username;
+    public Employee(String userName, String fullName, String department, Integer jobGrade, Long salary, LocalDate creationDate) {
+        this.userName = userName;
         this.fullName = fullName;
         this.department = department;
         this.jobGrade = jobGrade;
@@ -28,12 +28,12 @@ public class Employee {
     public Employee() {
     }
 
-    public String getUsername() {
-        return username;
+    public String getUserName() {
+        return userName;
     }
 
-    public void setUsername(String username) {
-        this.username = username;
+    public void setUserName(String userName) {
+        this.userName = userName;
     }
 
     public String getFullName() {
@@ -79,7 +79,7 @@ public class Employee {
     @Override
     public String toString() {
         return "Employee{" +
-                "username='" + username + '\'' +
+                "userName='" + userName + '\'' +
                 ", fullName='" + fullName + '\'' +
                 ", department='" + department + '\'' +
                 ", jobGrade=" + jobGrade +

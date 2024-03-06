@@ -8,4 +8,7 @@ import java.util.List;
 public interface EmployeeRepository extends JpaRepository<Employee, String> {
     List<Employee> findByFullName(String fullName);
     List<Employee> findByUserName(String userName);
+    List<Employee> findBySalaryGreaterThan(Long salary);
+    List<Employee> findByFullNameLike(String fullName);
+
 }

@@ -25,7 +25,7 @@ public class FinalexamApplication {
 		return args -> {
 			if (employeeRepository.findAll().isEmpty()) {
 				Employee employee1 = new Employee("kovacspisti94", "Kovács István", "HR", 3, 450000L, LocalDate.now());
-				Employee employee2 = new Employee("szabomarci55", "Szabó Márton", "IT", 4, 850000L, LocalDate.now());
+				Employee employee2 = new Employee("molnarmarci55", "Molnár Márton", "IT", 4, 850000L, LocalDate.now());
 				Employee employee3 = new Employee("takacseszti11", "Takács Eszter", "HR", 5, 800000L, LocalDate.now());
 
 				employeeRepository.save(employee1);

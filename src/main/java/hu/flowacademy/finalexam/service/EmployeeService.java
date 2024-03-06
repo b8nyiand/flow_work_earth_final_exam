@@ -33,5 +33,11 @@ public class EmployeeService {
     public List<Employee> findAllUsers() {
         return employeeRepository.findAll();
     }
+    public List<Employee> findBySalaryGreaterThan(Long salary) {
+        return employeeRepository.findBySalaryGreaterThan(salary);
+    }
+    public List<Employee> findByFullNameLikeMolnar() {
+        return employeeRepository.findByFullNameLike("%Molnár%");
+    }
 
 }
