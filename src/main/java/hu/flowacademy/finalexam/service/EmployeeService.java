@@ -33,4 +33,8 @@ public class EmployeeService {
     public List<Employee> findByFullName(String fullName){
         return employeeRepository.findByFullNameContaining(fullName);
     }
+
+    public List<Employee> findByLike(String name){
+        return employeeRepository.findByFullNameLike(name);
+    }
 }

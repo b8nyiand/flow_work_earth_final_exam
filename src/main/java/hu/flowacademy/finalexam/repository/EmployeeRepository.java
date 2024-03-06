@@ -7,6 +7,8 @@ import java.util.List;
 
 public interface EmployeeRepository extends JpaRepository<Employee, String> {
 
-    List<Employee> findByFullNameContaining(String name);
+    List<Employee> findByFullNameContaining(String fullName);
+
+    List<Employee> findByFullNameLike(String fullName);
 
 }
