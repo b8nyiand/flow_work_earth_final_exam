@@ -22,7 +22,12 @@ public class EmployeeService {
     }
 
     public List<Employee> employeeList(String username){
-        return employeeRepository.findUsername(username);
+        return employeeRepository.findUserName(username);
+    }
+
+    public void deleteEmployee(String username) {
+        employeeRepository.deleteById(username);
+
     }
 
 }

@@ -12,15 +12,21 @@ public class EmployeeController {
 
     @PostMapping("/add")
     @ResponseStatus(HttpStatus.CREATED)
-    public Employee addEmployee(@RequestBody Employee employee){
+    public Employee addEmployee(@RequestBody Employee employee) {
         return employeeService.addEmployee(employee);
     }
-@
-    public Employee upDate(Employee employee){
-        return employeeService.employeeList();
+
+    @PutMapping("/updateUser/{userName}")
+    @ResponseStatus(HttpStatus.OK)
+    public Employee upDate(@RequestBody Employee employee) {
+        return employeeService.updateEmployee(employee);
     }
 
 
+    @DeleteMapping("/delete/{userName}")
+    public void deleteEmployee(@PathVariable String userName) {
+        employeeService.deleteEmployee(userName);
+    }
 
 
 }

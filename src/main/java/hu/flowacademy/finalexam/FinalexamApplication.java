@@ -13,21 +13,30 @@ import java.time.LocalDate;
 @SpringBootApplication
 public class FinalexamApplication {
 
-	@Autowired
-	private EmployeeRepository employeeRepository;
+    @Autowired
+    private EmployeeRepository employeeRepository;
 
-	public static void main(String[] args) {
-		SpringApplication.run(FinalexamApplication.class, args);
-	}
+    public static void main(String[] args) {
+        SpringApplication.run(FinalexamApplication.class, args);
+    }
 
-	public CommandLineRunner runner() {
-		if (
-				employeeRepository.findAll().isEmpty()
-		) {
-			Employee employee = new Employee("Kovács Lajos", "sales", 1, 570000L, LocalDate.now());
+    @Bean
+    public CommandLineRunner runner() {
+        return args -> {
 
-			employeeRepository.save(employee);
-		}
-	}
+
+            if (
+                    employeeRepository.findAll().isEmpty()) {
+
+
+                Employee employee = new Employee("Kovács Lajos", "sales", 1, 570000L, LocalDate.now());
+
+                employeeRepository.save(employee);
+
+
+            }
+        };
+    }
 
 }
+
