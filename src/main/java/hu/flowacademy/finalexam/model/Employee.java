@@ -2,6 +2,7 @@ package hu.flowacademy.finalexam.model;
 
 
 import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
 import org.springframework.cglib.core.Local;
 
 import java.time.LocalDate;
@@ -9,6 +10,7 @@ import java.time.LocalDate;
 @Entity
 public class Employee {
 
+    @Id
     private String username;
     private String fullName;
     private String department;
