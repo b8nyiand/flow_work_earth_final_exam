@@ -13,4 +13,6 @@ public interface EmployeeRepository  extends JpaRepository<Employee, Long> {
     List<Employee> findByFullNameLike(String fullName);
 
     List<Employee> findBySalaryGreaterThan(int salary);
+
+    void deleteByUsername(String username);
 }
