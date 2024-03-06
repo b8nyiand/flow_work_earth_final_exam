@@ -30,7 +30,7 @@ public class EmployeeService {
     public List<Employee> findByUserName(String userName) {
         return employeeRepository.findByUserName(userName);
     }
-    public List<Employee> findAllUsers() {
+    public List<Employee> findAllEmployees() {
         return employeeRepository.findAll();
     }
     public List<Employee> findBySalaryGreaterThan(Long salary) {

@@ -13,26 +13,25 @@ import java.time.LocalDate;
 @SpringBootApplication
 public class FinalexamApplication {
 
-	public static void main(String[] args) {
-		SpringApplication.run(FinalexamApplication.class, args);
-	}
+    public static void main(String[] args) {
+        SpringApplication.run(FinalexamApplication.class, args);
+    }
 
-	@Autowired
-	EmployeeRepository employeeRepository;
+    @Autowired
+    EmployeeRepository employeeRepository;
 
-	@Bean
-	public CommandLineRunner runner() {
-		return args -> {
-			if (employeeRepository.findAll().isEmpty()) {
-				Employee employee1 = new Employee("kovacspisti94", "Kovács István", "HR", 3, 450000L, LocalDate.now());
-				Employee employee2 = new Employee("molnarmarci55", "Molnár Márton", "IT", 4, 850000L, LocalDate.now());
-				Employee employee3 = new Employee("takacseszti11", "Takács Eszter", "HR", 5, 800000L, LocalDate.now());
+    @Bean
+    public CommandLineRunner runner() {
+        return args -> {
+            if (employeeRepository.findAll().isEmpty()) {
+                Employee employee1 = new Employee("kovacspisti94", "Kovács István", "HR", 3, 450000L, LocalDate.now());
+                Employee employee2 = new Employee("molnarmarci55", "Molnár Márton", "IT", 4, 850000L, LocalDate.now());
+                Employee employee3 = new Employee("takacseszti11", "Takács Eszter", "HR", 5, 800000L, LocalDate.now());
 
-				employeeRepository.save(employee1);
-				employeeRepository.save(employee2);
-				employeeRepository.save(employee3);
-			}
-		};
-	}
-
+                employeeRepository.save(employee1);
+                employeeRepository.save(employee2);
+                employeeRepository.save(employee3);
+            }
+        };
+    }
 }
