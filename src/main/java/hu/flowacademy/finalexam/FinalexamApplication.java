@@ -26,11 +26,11 @@ public class FinalexamApplication {
     @Bean
     CommandLineRunner runner() {
         return args -> {
-            if (employeeRepository.findAll().isEmpty()) {
-                employeeRepository.save(new Employee("belus", "Kovács Béla", "Marketing", 1, 200220L));
-                employeeRepository.save(new Employee("jocos", "Kovács József", "HR", 2, 400220L));
-                employeeRepository.save(new Employee("molnar01", "Molnár Béla", "IT", 3, 800220L));
-                employeeRepository.save(new Employee("molnarka", "Molnár Áron", "Marketing", 4, 600220L));
+            if (employeeService.findAll().isEmpty()) {
+                employeeService.save(new Employee("belus", "Kovács Béla", "Marketing", 1, 200220L));
+                employeeService.save(new Employee("jocos", "Kovács József", "HR", 2, 400220L));
+                employeeService.save(new Employee("molnar01", "Molnár Béla", "IT", 3, 800220L));
+                employeeService.save(new Employee("molnarka", "Molnár Áron", "Marketing", 4, 600220L));
             }
             System.out.println("Ready");
         };

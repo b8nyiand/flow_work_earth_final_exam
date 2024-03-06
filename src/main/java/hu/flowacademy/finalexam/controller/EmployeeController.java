@@ -42,5 +42,14 @@ public class EmployeeController {
         return employeeService.findByUsername(username);
     }
 
+    @GetMapping("/findByFullName")
+    public Employee findByFullName(String fullName) {
+        return employeeService.findByUsername(fullName);
+    }
+
+    @GetMapping("/findBySalaryMoreThan/")
+    public List<Employee> findBySalaryMoreThan(@PathVariable Long salary) {
+        return employeeService.findBySalaryMoreThan(salary);
+    }
 
 }
