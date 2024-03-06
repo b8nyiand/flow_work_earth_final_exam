@@ -15,6 +15,10 @@ public class EmployeeController {
     public Employee addEmployee(@RequestBody Employee employee){
         return employeeService.addEmployee(employee);
     }
+@
+    public Employee upDate(Employee employee){
+        return employeeService.employeeList();
+    }
 
 
 
