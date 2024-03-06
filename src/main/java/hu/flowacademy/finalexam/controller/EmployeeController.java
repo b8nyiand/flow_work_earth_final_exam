@@ -33,7 +33,6 @@ public class EmployeeController {
 
     }
 
-
     @GetMapping("/findByFullName/{fullName}")
     public List<Employee> findByFullName(@PathVariable String fullName) {
         return employeeService.findByFullName(fullName);
@@ -42,4 +41,9 @@ public class EmployeeController {
             public List<Employee>findById(@PathVariable String username){
         return employeeService.findById(username);
     }
+    @GetMapping("/biggersalary/{salary}")
+    public  List<Employee> salaryIsBigger(@PathVariable Long salary){
+        return employeeService.salaryIsBigger(salary);
+    }
+
 }
